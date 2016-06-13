@@ -1,23 +1,23 @@
-# puppet-repo_jethro
+# puppet-repo_netbydesign
 
 This Puppet module configures the repositories available at
-repos.jethrocarr.com for supported platforms.
+apt.netbydesign.nz.
 
 
 # Usage
 
 If you are using r10k, make sure the module is in your Puppetfile
 
-    mod 'jethrocarr/repo_jethro'
+    mod 'danielfaulknor/repo_netbydesign'
 
 In your Puppet manifests (eg site.pp):
 
-    include repo_jethro
+    include repo_netbydesign
 
 If you want to include from a specific module (eg SOE) and ensure the repo is
 installed before any packages, use:
 
-    require repo_jethro
+    require repo_netbydesign
 
 If you wish to change any of the options, eg disable a particular repo or even
 override where the packages are pulled from (eg local mirror) the best place
@@ -26,7 +26,7 @@ is to override inside Hiera.
 
 # Security
 
-Whilst packages are downloaded via HTTP, all packages using the Jethro Carr
+Whilst packages are downloaded via HTTP, all packages using the netbydesign 
 repos are GPG signed. The GPG signing public key is included in this Puppet
 module, rather than being downloaded via unencrypted methods.
 
@@ -42,3 +42,7 @@ See the LICENSE.txt or http://www.apache.org/licenses/LICENSE-2.0
     See the License for the specific language governing permissions and
     limitations under the License.
 
+
+# Source
+
+https://github.com/jethrocarr/puppet-repo_jethro
